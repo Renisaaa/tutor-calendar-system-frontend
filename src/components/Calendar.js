@@ -19,7 +19,7 @@ const CalendarComponent = ({ user }) => {
   //* Effects
   useEffect(() => {
     dispatch(fetchEvents(user.user._id));
-  }, [dispatch]);
+  }, [user.user._id, dispatch]);
 
   const handleDateClick = (info) => {
     setDate(info.dateStr);
